@@ -1,4 +1,4 @@
-# BLAML - YAML file splitter for large Kubernetes templates
+# BLAML - YAML file splitter for huge Kubernetes templates
 
 ### Usage
 Place your XⁿL k8s template file in the project dir as `test.yaml`
