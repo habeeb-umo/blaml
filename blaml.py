@@ -6,7 +6,8 @@ output_filenames = []
 yaml_filenames = []
 count = 0
 
-shutil.rmtree('./output')
+if os.path.exists('./output'):
+    shutil.rmtree('./output')
 os.makedirs('./output')
 
 for line in input_file:
@@ -18,7 +19,7 @@ for line in input_file:
         output = open(output_name, 'w')
 
     # Find/store chart name from metadata
-    if line.startswith('  name:'):a
+    if line.startswith('  name:'):
         yaml_name = line[8:len(line)-1]
         yaml_filenames.append('./output/' + yaml_name + '.yaml')
 
